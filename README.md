@@ -1,4 +1,4 @@
-[![Code Climate](https://codeclimate.com/github/andela-bmakinwa/hacista/badges/gpa.svg)](https://codeclimate.com/github/andela-bmakinwa/hacista)[![Coverage Status](https://coveralls.io/repos/github/andela-bmakinwa/hacista/badge.svg?branch=master)](https://coveralls.io/github/andela-bmakinwa/hacista?branch=master)
+[![Code Climate](https://codeclimate.com/github/andela-bmakinwa/hacista/badges/gpa.svg)](https://codeclimate.com/github/andela-bmakinwa/hacista) [![Coverage Status](https://coveralls.io/repos/github/andela-bmakinwa/hacista/badge.svg?branch=master)](https://coveralls.io/github/andela-bmakinwa/hacista?branch=master)
 
 == HACISTA
 
