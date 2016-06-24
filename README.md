@@ -1,4 +1,5 @@
-== README
+[![Code Climate](https://codeclimate.com/github/andela-bmakinwa/hacista/badges/gpa.svg)](https://codeclimate.com/github/andela-bmakinwa/hacista)
+== HACISTA
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
