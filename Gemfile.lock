@@ -131,6 +131,7 @@ GEM
       pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
     os (0.9.6)
+    pg (0.18.4)
     pkg-config (1.1.7)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -240,6 +241,7 @@ DEPENDENCIES
   jquery-rails
   material_design_lite-rails
   neo4j
+  pg
   rails (= 4.2.5)
   rails-backbone
   rspec-rails (~> 3.4)
