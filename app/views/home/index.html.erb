@@ -1,2 +1,59 @@
-<h1>Hacista</h1>
-<p>User registration page</p>
+<div class="mdl-layout mdl-js-layout mdl-color-text--white mdl-color--deep-purple">
+  <div class="mdl-layout__content">
+    <div class="mdl-grid mdl-grid--no-spacing">
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet">
+      </div>
+
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet">
+        <div class="sign-up">
+          <h5 class="mdl-color-text--orange mdl-typography--text-center line"><i class="material-icons">dashboard</i><br> Hacista</h5>
+          <h3 class="mdl-typography--text-center">Create Account</h3>
+
+          <div class="form-card mdl-card mdl-shadow--2dp mdl-color-text--black form-card">
+            <form action="#">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input type="text" class="mdl-textfield__input" name="name" pattern="^[a-zA-Z]{3,}" id="name">
+                <label for="email" class="mdl-textfield__label">Name</label>
+                <span class="mdl-textfield__error">Name is required</span>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input type="text" class="mdl-textfield__input" name="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" id="email">
+                <label for="email" class="mdl-textfield__label">Email</label>
+                <span class="mdl-textfield__error">Email is invalid!</span>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input type="text" class="mdl-textfield__input" name="username" pattern="^[a-zA-Z]{3,}" id="username">
+                <label for="email" class="mdl-textfield__label">Username</label>
+                <span class="mdl-textfield__error">Username is required</span>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input type="password" class="mdl-textfield__input" name="email" pattern="^[a-zA-Z]{3,}" id="password">
+                <label for="email" class="mdl-textfield__label">Password</label>
+                <span class="mdl-textfield__error">Password is required</span>
+              </div>
+
+              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                <input type="checkbox" id="switch-1" class="mdl-switch__input" checked>
+                <span class="mdl-switch__label mdl-color-text--grey">Show password</span>
+              </label>
+
+              <button class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                Sign up
+              </button>
+            </form>
+
+          </div>
+          <p class="account-opt">
+            Already have an account? <a class="mdl-navigation__link mdl-color-text--white" href="#">Login</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet">
+      </div>
+    </div>
+  </div>
+</div>

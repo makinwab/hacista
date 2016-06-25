@@ -12,11 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require material
 //= require turbolinks
 //= require underscore
 //= require backbone
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/hacista
-//= require material
 //= require_tree .
