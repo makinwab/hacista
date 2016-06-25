@@ -35,6 +35,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.4'
   gem 'coveralls', require: false
   gem 'factory_girl_rails'
+  gem 'sqlite3', require: false
 end
 
 group :development do
