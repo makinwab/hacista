@@ -20,6 +20,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'neo4j'
 gem "rails-backbone"
 gem 'material_design_lite-rails'
+gem 'sqlite3', require: false
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -36,7 +37,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.4'
   gem 'coveralls', require: false
   gem 'factory_girl_rails'
-  gem 'sqlite3', require: false
 end
 
 group :development do
