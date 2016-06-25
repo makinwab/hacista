@@ -18,4 +18,5 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/hacista
+//= require material
 //= require_tree .
