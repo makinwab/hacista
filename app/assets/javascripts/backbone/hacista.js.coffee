@@ -9,3 +9,9 @@ window.Hacista =
   Collections: {}
   Routers: {}
   Views: {}
+  init: ->
+    new Hacista.Routers.UsersRouter()
+    Backbone.history.start()
+
+$(document).ready ->
+  Hacista.init()
