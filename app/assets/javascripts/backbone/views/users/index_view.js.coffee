@@ -4,5 +4,5 @@ class Hacista.Views.Users.IndexView extends Backbone.View
   template: JST["backbone/templates/users/index"]
 
   render: ->
-    $(@el).html(@template())
+    $(@el).html(@template(entries: "Entries here"))
     this
