@@ -1,0 +1,27 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.sign-up {
+  padding:3em 1em;
+}
+
+.line {
+  font-weight: lighter;
+  margin-bottom: 3em;
+}
+
+.form-card.mdl-card {
+  margin: 0 auto;
+  width: 90%;
+  padding: 0.75em 3em;
+}
+
+.form-card form .btn {
+  margin: 1.5em 0;
+  width: 100%;
+}
+
+.account-opt {
+  text-align: center;
+  color: #B6B6B6
+}
