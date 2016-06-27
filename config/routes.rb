@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  scope "api" do
+    post 'users', to: "users#create"
+  end
+  
   root 'main#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
