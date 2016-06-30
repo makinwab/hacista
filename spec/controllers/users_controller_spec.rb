@@ -1,11 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe UsersController, type: :controller do
-
-  describe "GET #create" do
+RSpec.describe UsersController, type: :request do
+  describe "POST /api/users" do
     it "returns http success" do
-      get :create
-      expect(response).to have_http_status(:success)
+      post "/api/users", { users: attributes_for(:user) }
+      expect(response).to have_http_status(:created)
     end
   end
 

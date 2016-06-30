@@ -11,6 +11,7 @@ window.Hacista =
   Views: {}
   init: ->
     new Hacista.Routers.UsersRouter()
+    new Hacista.Routers.DashboardsRouter()
     Backbone.history.start()
 
 $(document).ready ->
