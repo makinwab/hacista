@@ -1,0 +1,39 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.social-auth{
+  position: relative;
+  width:120%;
+  right: 1.7em;
+  height: 9em;
+  top: -3em;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.social-auth i {
+  margin: 1.575em 0.75em 0.5em 0.5em;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.social-auth h5 {
+  display: block;
+}
+
+.social-auth h5, #sign-in input[type="submit"] {
+  font-weight: 400;
+}
+
+.sign-in .line {
+  font-weight: lighter;
+  margin-bottom: 6em;
+}
+
+#sign-in {
+  margin-top: -1.5em;
+}
+
+#sign-in p {
+  font-weight: 300;
+}
