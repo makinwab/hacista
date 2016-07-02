@@ -4,8 +4,8 @@ class Hacista.Views.Users.IndexView extends Backbone.View
   template: JST["backbone/templates/users/index"]
 
   initalize: ->
-   @collection.on("reset", @redirect_to_dashboard, this)
-   @collection.on("add", @redirect_to_dashboard, this)
+   #@collection.on("reset", @redirect_to_dashboard, this)
+   #@collection.on("add", @redirect_to_dashboard, this)
 
   events:
     "submit #new_user": "createUser"
@@ -24,7 +24,7 @@ class Hacista.Views.Users.IndexView extends Backbone.View
       if !_.isEmpty field.name
         data[field.name] = field.value
 
-    @collection.create(data, { wait: true, success: @redirect_to_dashboard })
+    @model.save(data, { wait: true, success: @redirect_to_dashboard })
 
 
   redirect_to_dashboard: (model) ->

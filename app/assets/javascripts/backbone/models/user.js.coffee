@@ -1,5 +1,6 @@
 class Hacista.Models.User extends Backbone.Model
   paramRoot: 'users'
+  urlRoot: '/api/users'
 
   #defaults:
 

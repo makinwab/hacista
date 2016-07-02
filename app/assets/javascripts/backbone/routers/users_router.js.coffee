@@ -1,14 +1,14 @@
 class Hacista.Routers.UsersRouter extends Backbone.Router
 
   initialize: ->
-    @collection = new Hacista.Collections.UsersCollection()
+    @model = new Hacista.Models.User()
 
   routes:
     "entries/:id" : "show"
     ""        : "index"
 
   index: ->
-    @view = new Hacista.Views.Users.IndexView(collection: @collection)
+    @view = new Hacista.Views.Users.IndexView(model: @model)
     $("#container").html(@view.render().el)
 
   show: (id) ->
