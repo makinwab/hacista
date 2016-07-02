@@ -6,6 +6,7 @@ class Hacista.Views.Users.IndexView extends Backbone.View
   initalize: ->
    #@collection.on("reset", @redirect_to_dashboard, this)
    #@collection.on("add", @redirect_to_dashboard, this)
+   console.log "IndexView"
 
   events:
     "submit #new_user": "createUser"
