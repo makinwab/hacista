@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
   def create
-    user = User.create(user_params)
+    user = User.new(user_params)
+
     respond_to do |format|
-      if user
+      if user.save
         format.json { render json: user, status: :created }
       else
-        format.json { render json: user.errors, status: 422 }
+        format.json { render json: user.errors.to_json, status: 422 }
       end
     end
   end
