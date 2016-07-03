@@ -8,6 +8,7 @@ class Hacista.Views.Users.AuthView extends Backbone.View
 
   events:
     "submit #sign-in": "signin"
+    "click a.signup": "signup"
 
   render: ->
     $(@el).html(@template())
@@ -16,3 +17,7 @@ class Hacista.Views.Users.AuthView extends Backbone.View
   signin: (event) ->
     event.preventDefault()
     console.log "signin"
+
+  signup: (event) ->
+    event.preventDefault()
+    window.location = "/"

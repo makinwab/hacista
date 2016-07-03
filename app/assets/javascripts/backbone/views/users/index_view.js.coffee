@@ -11,6 +11,7 @@ class Hacista.Views.Users.IndexView extends Backbone.View
   events:
     "submit #new_user": "createUser"
     "click .new": "createUser"
+    "click a.login": "signin"
 
   render: ->
     $(@el).html(@template(entries: "Entries here"))
@@ -30,3 +31,7 @@ class Hacista.Views.Users.IndexView extends Backbone.View
 
   redirect_to_dashboard: (model) ->
     window.location = "#dashboard"
+
+  signin: (event) ->
+    event.preventDefault()
+    window.location = "#auth"
