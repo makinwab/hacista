@@ -30,6 +30,7 @@ class Hacista.Views.Users.IndexView extends Backbone.View
 
 
   redirect_to_dashboard: (model) ->
+    $("#new_user")[0].reset()
     window.location = "#dashboard"
 
   signin: (event) ->

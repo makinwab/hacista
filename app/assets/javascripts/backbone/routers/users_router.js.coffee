@@ -18,5 +18,4 @@ class Hacista.Routers.UsersRouter extends Backbone.Router
 
   signin: ->
     @view = new Hacista.Views.Users.AuthView(model: @model)
-    console.log @view.render().el
     $("#container").html(@view.render().el)

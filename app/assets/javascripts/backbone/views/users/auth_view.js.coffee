@@ -16,8 +16,29 @@ class Hacista.Views.Users.AuthView extends Backbone.View
 
   signin: (event) ->
     event.preventDefault()
-    console.log "signin"
+    data = {}
+    # get user data from the form
+    form_fields = $("#sign-in :input")
+    _.each form_fields, (field) ->
+      if !_.isEmpty field.name
+        data[field.name] = field.value
+    # send data to backend for authentication
+    @authenticate(data)
+
+  authenticate: (data) ->
+    @model.save(data, {
+      url: @model.url("auth"),
+      wait: true,
+      success: @redirect_to_dashboard
+    })
+
+  redirect_to_dashboard: (model) ->
+    #save in localStorage
+    window.localStorage.setItem("userhash", model.get("id"))
+    #redirect to dashboard page
+    window.location = "#dashboard"
 
   signup: (event) ->
     event.preventDefault()
+    #redirect ot homepage
     window.location = "/"
