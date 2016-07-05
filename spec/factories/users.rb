@@ -11,5 +11,15 @@ FactoryGirl.define do
       password "ma"
       username "ma"
     end
+
+    factory :valid_auth do
+      email "makinwa37@gmail.com"
+      password "makinwa37"
+    end
+
+    factory :invalid_auth do
+      email "makinwa@y.o"
+      password "maki"
+    end
   end
 end

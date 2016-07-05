@@ -9,6 +9,7 @@ end
 require "spec_helper"
 require "rspec/rails"
 require "shoulda/matchers"
+require "json"
 
 # Checks for pending migration and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.

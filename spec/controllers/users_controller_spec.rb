@@ -1,5 +1,4 @@
 require "rails_helper"
-require "json"
 
 RSpec.describe UsersController, type: :request do
   describe "POST /api/users" do

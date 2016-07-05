@@ -1,5 +1,5 @@
-require 'openssl'
-require 'base64'
+require "openssl"
+require "base64"
 
 module Obfuscate
   def self.included(base)
@@ -7,11 +7,11 @@ module Obfuscate
   end
 
   def cipher
-    OpenSSL::Cipher::Cipher.new('aes-256-cbc')
+    OpenSSL::Cipher::Cipher.new("aes-256-cbc")
   end
 
   def cipher_key
-    ENV['cipher_key']
+    ENV["cipher_key"]
   end
 
   def decrypt(value)
