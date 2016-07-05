@@ -26,6 +26,7 @@ gem "pg"
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
+gem 'active_model_serializers', '~> 0.10.0'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
