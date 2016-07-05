@@ -1,3 +1,4 @@
+require "pry"
 class User < ActiveRecord::Base
   has_secure_password
 
@@ -6,4 +7,6 @@ class User < ActiveRecord::Base
   validates :email, format: { with: VALID_EMAIL_FORMAT }
   validates :name, :username, :email, presence: true, length: { minimum: 3 }
   validates :password, presence: true, length: { minimum: 3 }
+
+  include Obfuscate
 end
