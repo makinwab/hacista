@@ -36,7 +36,7 @@ class Hacista.Views.Users.AuthView extends Backbone.View
     #save in localStorage
     window.localStorage.setItem("userhash", model.get("id"))
     #redirect to dashboard page
-    window.location = "#dashboard"
+    window.location = "/dashboard"
 
   signup: (event) ->
     event.preventDefault()
