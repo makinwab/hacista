@@ -1,0 +1,86 @@
+<div class="mdl-layout mdl-js-layout">
+  <div class="mdl-layout__content">
+    <div class="mdl-grid mdl-grid--no-spacing">
+      <header class="dashboard-header mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+          <h5 class="dashboard-title mdl-color-text--accent"><i class="material-icons">dashboard</i><span>Hacista</span></h5>
+          <h6 class="dashboard-logout"><a href="#" class="mdl-color-text--white"><i class="material-icons md-16">exit_to_app</i>Logout</a></h6>
+        </div>
+
+        <div class="mdl-layout__header-row">
+          <h2 class="dashboard-user"> Makinwa Olubukola</h2>
+        </div>
+        <span class="dashboard-message">Welcome back. See overview, projects and progress.</span>
+
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+          <a href="#scroll-tab-1" class="dashboard-nav mdl-layout__tab is-active">Overview</a>
+          <a href="#scroll-tab-2" class="dashboard-nav mdl-layout__tab">Projects</a>
+          <a href="#scroll-tab-3" class="dashboard-nav mdl-layout__tab">Profile</a>
+        </div>
+
+        <button class="add-project mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+          <i class="material-icons">create</i>
+        </button>
+      </header>
+
+      <div class="dashboard-content mdl-layout__content mdl-color--white mdl-color-text--black">
+        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+          <div class="page-content">
+            <div class="project stats clearfix">
+              <p class="mdl-typography--title">Project Stats</p>
+              <div class="project-overview mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                  <h6 class="mdl-card__title-text"><i class="material-icons md-24">view_list</i>Total Projects</h6>
+                </div>
+                <div class="project-size mdl-card__supporting-text">
+                  <h1 class="mdl-typography--display-4 mdl-typography--text-left mdl-color-text--accent">640</h1>
+                </div>
+              </div>
+
+              <div class="project-overview mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                  <h6 class="mdl-card__title-text"><i class="material-icons md-24">view_list</i>Complete Projects</h6>
+                </div>
+                <div class="project-size mdl-card__supporting-text">
+                  <h1 class="mdl-typography--display-4 mdl-typography--text-left mdl-color-text--accent">40</h1>
+                </div>
+              </div>
+
+              <div class="project-overview mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                  <h6 class="mdl-card__title-text"><i class="material-icons md-24">view_list</i>Incomplete Projects</h6>
+                </div>
+                <div class="project-size mdl-card__supporting-text">
+                  <h1 class="mdl-typography--display-4 mdl-typography--text-left mdl-color-text--accent">600</h1>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="profile stats">
+              <p class="mdl-typography--title">Profile Stats</p>
+              <div class="profile-overview mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                  <h6 class="mdl-card__title-text"><i class="material-icons">supervisor_account</i>Profile Complete</h6>
+                </div>
+                <div class="project-size mdl-card__supporting-text">
+                  <h1 class="mdl-typography--display-4 mdl-typography--text-left mdl-color-text--accent">80%</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <footer>
+          &copy; 2016. Developed by <a href="http://github.com/andela-bmakinwa">Makinwa Olubukola</a>.
+        </footer>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+          <div class="page-content">Stuff two</div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+          <div class="page-content"><!-- Your content goes here --></div>
+        </section>
+      </div>
+      </div>
+    </div>
+</div>

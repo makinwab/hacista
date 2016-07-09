@@ -1,6 +1,9 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #ffffff;
+}
 .sign-up {
   padding:3em 1em;
 }
@@ -25,4 +28,139 @@
 .account-opt {
   text-align: center;
   color: #B6B6B6
+}
+
+/******************** Dashboard Page styling *****************************/
+
+/******************** Dashboard heager styling *****************************/
+header {
+  height: 15.45em;
+  position: relative;
+}
+
+.dashboard-header .mdl-layout__header {
+  padding-bottom: 0;
+  padding-top: 1em;
+}
+
+.dashboard-title i, .dashboard-logout a i {
+  position: relative;
+  top: 0.2em;
+}
+.dashboard-header .mdl-layout__header-row{
+  position: relative;
+}
+
+.dashboard-logout{
+  position: absolute;
+  right: 48px;
+}
+
+.dashboard-logout a i {
+  right: 0.2em;
+}
+.dashboard-logout a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.material-icons.md-16 { font-size: 16px; }
+
+.dashboard-title, .dashboard-user, .dashboard-logout a {
+  font-weight: lighter;
+}
+.dashboard-user {
+    margin:0 auto;
+}
+
+.dashboard-message{
+  color: #B6B6B6;
+  font-weight: lighter;
+  padding-left: 3em;
+  margin:-0.8em auto 0 auto;
+}
+
+.dashboard-header .mdl-layout__tab-bar {
+  position: relative;
+  top: 0.15em;
+  margin-bottom: 0.2em !important;
+
+}
+
+.dashboard-nav.mdl-layout__tab {
+  padding: 0;
+  margin: 24px;
+}
+
+
+/******************** Dashboard content styling *****************************/
+.dashboard-content{
+  min-height: 37em;
+  padding: 0 6em 1em 6em;
+  margin:0 auto;
+}
+
+.page-content .project {
+  margin-top: 2em;
+}
+.page-content .profile {
+  margin-top: 4em;
+}
+
+.page-content p {
+  color: #B6B6B6;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.page-content .project-overview i, .page-content .profile-overview i {
+  font-size: 36px;
+  position: relative;
+  right: 0.1em;
+  top: -0.15em;
+  color: #727272;
+}
+
+.project-overview .mdl-card__title, .profile-overview .mdl-card__title {
+  border-bottom: 1px dashed #B6B6B6;
+}
+
+.project-size.mdl-card__supporting-text {
+  padding-top: 0;
+}
+
+.project-overview {
+  float: left;
+  margin-right: 2em;
+}
+
+.clearfix:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.add-project.mdl-button {
+  position: absolute;
+  right: 2em;
+  bottom: -1.2em;
+}
+
+
+/********************************** Footer styling ******************/
+footer {
+  text-align: center;
+  margin-top: 6em;
+  color: #D1C4E9 ;
+  font-weight: lighter;
+}
+
+footer a {
+  color: #D1C4E9;
+  text-decoration: none;
+  border-bottom: 2px solid #D1C4E9;
+  padding-bottom: 0.1em;
+  font-weight: lighter;
 }

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     post 'users', to: 'users#create'
     post 'users/auth', to: 'sessions#create'
   end
+
+  get "/dashboard", to: "main#dashboard"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
