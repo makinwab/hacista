@@ -20,7 +20,7 @@ RSpec.describe SessionsController, type: :request do
     end
 
     context "when the user does not exist" do
-      it "returns serialized an error message and http status" do
+      it "returns an error message and http status" do
         invalid_user = attributes_for(:invalid_auth)
         post "/api/users/auth", users: invalid_user
         message = JSON.parse(response.body)
