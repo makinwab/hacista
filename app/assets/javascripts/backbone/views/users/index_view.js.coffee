@@ -10,6 +10,7 @@ class Hacista.Views.Users.IndexView extends Backbone.View
     "submit #new_user": "create_user"
     "click .new": "create_user"
     "click a.login": "sign_in"
+    "click .password-toggle span": "toggle_password"
 
   render: ->
     $(@el).html(@template(entries: "Entries here"))
@@ -39,3 +40,15 @@ class Hacista.Views.Users.IndexView extends Backbone.View
 
   show_loader: (display) ->
     $("#p2").css("display", display)
+
+  toggle_password: (event) ->
+    input_type = $("#password").attr("type") #get password input type
+
+    #set input type based on initial type
+    if input_type == "password"
+      @change_password_attr "text"
+    else
+      @change_password_attr "password"
+
+  change_password_attr: (type) ->
+    $("#password").attr("type", type)
