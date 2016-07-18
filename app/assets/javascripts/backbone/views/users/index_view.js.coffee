@@ -4,21 +4,21 @@ class Hacista.Views.Users.IndexView extends Backbone.View
   template: JST["backbone/templates/users/index"]
 
   initalize: ->
-   #@collection.on("reset", @redirect_to_dashboard, this)
-   #@collection.on("add", @redirect_to_dashboard, this)
    console.log "IndexView"
 
   events:
-    "submit #new_user": "createUser"
-    "click .new": "createUser"
-    "click a.login": "signin"
+    "submit #new_user": "create_user"
+    "click .new": "create_user"
+    "click a.login": "sign_in"
 
   render: ->
     $(@el).html(@template(entries: "Entries here"))
     this
 
-  createUser: (event) ->
+  create_user: (event) ->
     event.preventDefault()
+    @show_loader "block" #show progress bar
+
     form_fields = $("#new_user :input")
     data = {}
 
@@ -27,12 +27,15 @@ class Hacista.Views.Users.IndexView extends Backbone.View
         data[field.name] = field.value
 
     @model.save(data, { wait: true, success: @redirect_to_dashboard })
-
+    @show_loader "none" #hide progress bar
 
   redirect_to_dashboard: (model) ->
-    $("#new_user")[0].reset()
-    window.location = "/dashboard"
+    $("#new_user")[0].reset() #reset form
+    window.location = "/dashboard" #redirect user to dashboard
 
-  signin: (event) ->
+  sign_in: (event) ->
     event.preventDefault()
     window.location = "#auth"
+
+  show_loader: (display) ->
+    $("#p2").css("display", display)
