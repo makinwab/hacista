@@ -17,6 +17,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'knock', '~> 1.4.2'
+gem 'faker'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

@@ -6,6 +6,7 @@ RSpec.describe UsersController, type: :request do
       let(:valid_user) { attributes_for(:user) }
 
       before(:all) do
+        User.destroy_all
         post "/api/users", users: attributes_for(:user)
       end
 

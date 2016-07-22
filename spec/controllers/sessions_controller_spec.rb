@@ -2,14 +2,17 @@ require "rails_helper"
 
 RSpec.describe SessionsController, type: :request do
   describe "POST /api/users/auth" do
-    before(:each) { create(:user) }
+    before(:each) do
+      User.destroy_all
+      create(:user)
+    end
 
     context "when the user exists" do
       before(:all) do
         post "/api/users/auth", users: attributes_for(:valid_auth)
       end
 
-      let(:valid_user) { attributes_for(:valid_auth) }
+      let(:valid_user) { attributes_for(:user) }
 
       it "returns serialized user data" do
         user = JSON.parse(response.body)
