@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
   VALID_EMAIL_FORMAT = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
 
-  validates :email, format: { with: VALID_EMAIL_FORMAT }
+  validates :email, format: { with: VALID_EMAIL_FORMAT }, uniqueness: true
   validates :name, :username, :email, presence: true, length: { minimum: 3 }
   validates :password, presence: true, length: { minimum: 3 }
 
