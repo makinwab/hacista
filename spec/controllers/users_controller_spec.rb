@@ -27,7 +27,7 @@ RSpec.describe UsersController, type: :request do
         post "/api/users", users: attributes_for(:invalid_user)
       end
 
-      let(:messages) { JSON.parse(response.body)}
+      let(:messages) { JSON.parse(response.body) }
 
       it "returns error message" do
         length_message = "is too short (minimum is 3 characters)"
