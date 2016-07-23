@@ -4,6 +4,14 @@
 body {
   background-color: #ffffff;
 }
+/*snackbar*/
+.snack {
+  padding: 1em;
+  text-transform: capitalize;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
 
 /******************** Progress bar *****************************/
 #p2{
