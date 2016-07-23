@@ -27,8 +27,23 @@ class Hacista.Views.Users.IndexView extends Backbone.View
       if !_.isEmpty field.name
         data[field.name] = field.value
 
-    @model.save(data, { wait: true, success: @redirect_to_dashboard })
+    @model.save data,
+      wait: true
+      success: @redirect_to_dashboard
+      error: @handleError
+
     @show_loader "none" #hide progress bar
+
+  handleError: (model, response) ->
+   if response.status == 422
+     error = $.parseJSON(response.responseText)
+     _.each error, (message, attribute) ->
+       Snackbar.show
+         text: attribute + " " + message[0]
+         pos: 'top-right'
+         width: '475px'
+         showAction: false
+         customClass: 'snack'
 
   redirect_to_dashboard: (model) ->
     $("#new_user")[0].reset() #reset form
