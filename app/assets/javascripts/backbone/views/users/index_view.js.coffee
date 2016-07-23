@@ -42,7 +42,8 @@ class Hacista.Views.Users.IndexView extends Backbone.View
          text: attribute + " " + message[0]
          pos: 'top-right'
          width: '475px'
-         showAction: false
+         textColor: '#D1C4E9'
+         actionTextColor: '#ff9800'
          customClass: 'snack'
 
   redirect_to_dashboard: (model) ->

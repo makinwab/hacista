@@ -41,7 +41,8 @@ class Hacista.Views.Users.AuthView extends Backbone.View
         text: errorMessage
         pos: 'top-right'
         width: '475px'
-        showAction: false
+        textColor: '#D1C4E9'
+        actionTextColor: '#ff9800'
         customClass: 'snack'
 
 
