@@ -1,10 +1,9 @@
 class Hacista.Models.User extends Backbone.Model
   url: (path = "") ->
-    return '/api/users' + "/" + path
+    return '/api/user' + "/" + path
 
   paramRoot: 'users'
 
-  #defaults:
 
 class Hacista.Collections.UsersCollection extends Backbone.Collection
   model: Hacista.Models.User

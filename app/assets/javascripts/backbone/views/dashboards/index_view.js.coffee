@@ -3,12 +3,16 @@ Hacista.Views.Dashboards ||= {}
 class Hacista.Views.Dashboards.IndexView extends Backbone.View
   template: JST["backbone/templates/dashboards/index"]
 
+  initialize: ->
+    @model.fetch()
+    @model.bind("change", this.render, this)
+
   events: ->
     "click .dashboard-nav": "activateLink"
     "click .dashboard-logout a": "logout"
 
   render: ->
-    @$el.html(@template())
+    @$el.html(@template({name: @model.get("name")}))
     this
 
   activateLink: (event) ->

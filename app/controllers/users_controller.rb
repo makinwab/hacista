@@ -14,6 +14,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    respond_to do |format|
+      format.json { render json: current_user, status: :ok}
+    end
+  end
+
   private
 
   def user_params

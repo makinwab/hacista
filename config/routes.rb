@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   root 'main#index'
 
   scope 'api', defaults: {format: 'json'} do
-    post 'users', to: 'users#create'
-    post 'users/auth', to: 'sessions#create'
-    get 'users/logout', to: 'sessions#destroy'
+    get 'user', to: 'users#show'
+    post 'user', to: 'users#create'
+    post 'user/auth', to: 'sessions#create'
+    get 'user/logout', to: 'sessions#destroy'
   end
 
   get "dashboard", to: "main#dashboard"
