@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
     respond_to do |format|
       if user && user.authenticate(params["users"]["password"])
-        #create_user_session user
+        create_user_session user
         format.json { render json: user, status: :ok }
       else
         message = "invalid email or password"
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy
     destroy_user_session
-    
+
     respond_to do |format|
       format.json { render json: { message: "success" }, status: :ok }
     end

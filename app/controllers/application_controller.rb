@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     return if current_user
 
     respond_to do |format|
-       format.json { render json: { error: "not authenticated" }, status: 422 }
+      format.json { render json: { error: "not authenticated" }, status: 422 }
     end
   end
 
