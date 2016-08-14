@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   scope 'api', defaults: {format: 'json'} do
     post 'users', to: 'users#create'
     post 'users/auth', to: 'sessions#create'
+    get 'users/logout', to: 'sessions#destroy'
   end
 
-  get "/dashboard", to: "main#dashboard"
+  get "dashboard", to: "main#dashboard"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

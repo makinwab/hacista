@@ -3,9 +3,6 @@ Hacista.Views.Users ||= {}
 class Hacista.Views.Users.IndexView extends Backbone.View
   template: JST["backbone/templates/users/index"]
 
-  initalize: ->
-   console.log "IndexView"
-
   events:
     "submit #new_user": "create_user"
     "click .new": "create_user"
@@ -13,7 +10,7 @@ class Hacista.Views.Users.IndexView extends Backbone.View
     "click .password-toggle span": "toggle_password"
 
   render: ->
-    $(@el).html(@template(entries: "Entries here"))
+    $(@el).html(@template())
     this
 
   create_user: (event) ->
@@ -48,7 +45,7 @@ class Hacista.Views.Users.IndexView extends Backbone.View
 
   redirect_to_dashboard: (model) ->
     $("#new_user")[0].reset() #reset form
-    window.location = "/dashboard" #redirect user to dashboard
+    window.location = "/#dashboard" #redirect user to dashboard
 
   sign_in: (event) ->
     event.preventDefault()

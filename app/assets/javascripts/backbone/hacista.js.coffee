@@ -12,6 +12,7 @@ window.Hacista =
   init: ->
     new Hacista.Routers.UsersRouter()
     new Hacista.Routers.DashboardsRouter()
+    #Backbone.history.start({ pushState: true })
     Backbone.history.start()
 
 $(document).ready ->

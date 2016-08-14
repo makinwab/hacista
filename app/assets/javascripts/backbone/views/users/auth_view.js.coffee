@@ -3,9 +3,6 @@ Hacista.Views.Users ||= {}
 class Hacista.Views.Users.AuthView extends Backbone.View
   template: JST["backbone/templates/users/auth"]
 
-  initialize: ->
-    console.log @model
-
   events:
     "submit #sign-in": "signIn"
     "click a.signup": "signUp"
@@ -45,12 +42,9 @@ class Hacista.Views.Users.AuthView extends Backbone.View
         actionTextColor: '#ff9800'
         customClass: 'snack'
 
-
   redirectToDashboard: (model) ->
-    #save in localStorage
-    window.localStorage.setItem("userhash", model.get("id"))
     #redirect to dashboard page
-    window.location = "/dashboard"
+    window.location = "#dashboard"
 
   signUp: (event) ->
     event.preventDefault()
